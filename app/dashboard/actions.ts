@@ -6,7 +6,7 @@ import { z } from "zod"
 import { put } from "@vercel/blob"
 
 const LogMealSchema = z.object({
-  dish_name: z.string().min(1, "Название блюда обязательно"),
+  dish_name: z.string().min(1, "Названи�� блюда обязательно"),
   grams: z.coerce.number().positive("Вес должен быть положительным числом"),
   calories: z.coerce.number().min(0, "Калории не могут быть отрицательными"),
   protein: z.coerce.number().min(0, "Белки не могут быть отрицательными"),
